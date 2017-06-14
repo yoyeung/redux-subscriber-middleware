@@ -1,0 +1,22 @@
+{
+  "globals": {
+      "browser": true
+    },
+  "env": {
+      "browser": true,
+      "jest": true
+    },
+  "extends": "airbnb-base",
+  "parserOptions": {
+      "ecmaVersion": 8,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
+  },
+  "plugins": [
+      "import"
+  ],
+  "rules": {
+  }
+}
