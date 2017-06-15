@@ -6,6 +6,9 @@
   "engines": {
     "node": ">=4"
   },
+  "jest":{
+    "collectCoverage": true
+  },
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
