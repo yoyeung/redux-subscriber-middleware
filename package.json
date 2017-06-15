@@ -1,6 +1,6 @@
 {
   "name": "redux-subscriber-middleware",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Subscribe action type for mulitiple time or onece.",
   "main": "lib/index.js",
   "engines": {
