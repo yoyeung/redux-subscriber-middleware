@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/yoyeung/redux-subscriber-middleware.svg?branch=master)](https://travis-ci.org/yoyeung/redux-subscriber-middleware)
+[![Coverage Status](https://coveralls.io/repos/github/yoyeung/redux-subscriber-middleware/badge.svg?branch=master)](https://coveralls.io/github/yoyeung/redux-subscriber-middleware?branch=master)
+
 # redux-subscriber-middleware
 
 Subscribe and UnSubscribe action for Redux

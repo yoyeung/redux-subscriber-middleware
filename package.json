@@ -3,19 +3,37 @@
   "version": "0.0.1",
   "description": "Subscribe action type for mulitiple time or onece.",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "build": "babel index.js -d lib"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoyeung/redux-subscriber-middleware.git"
+  },
+  "keywords": [
+    "react",
+    "observer",
+    "subscribe",
+    "redux"
+  ],
   "author": "Moses Yeung <yoyeung@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoyeung/redux-subscriber-middleware/issues"
+  },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-airbnb": "^2.2.3",
     "babel-preset-latest": "^6.24.1",
+    "coveralls": "^2.13.1",
     "eslint": "^3.12.3",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
