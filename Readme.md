@@ -12,6 +12,7 @@ Subscribe and UnSubscribe action for Redux
 ## Usage
 
 For Middleware
+
 ```js
 import {createStore} from 'redux';
 import Subscriber from 'redux-subscriber-middleware';
@@ -28,6 +29,7 @@ let store = createStore(
 ```
 
 Inside the script
+
 ```js
 // or you can just import "subscribe" function from the package
 import { subscribeAction, subscribeOnceAction, unsubscribeAction } from 'redux-subscriber-middleware';
@@ -38,8 +40,17 @@ dispatch(subscribeAction('ACTION_YOU_WANT_TO_SUBSCRIBE', CALLBACK_FUNCTION));
 // for one time
 dispatch(subscribeOnceAction('ACTION_YOU_WANT_TO_SUBSCRIBE', CALLBACK_FUNCTION));
 
-// for unsubscribe
-dispatch(unsubscribeAction('ACTION_YOU_WANT_TO_SUBSCRIBE'));
+// unsubscribe all callbacks for action
+dispatch(unsubscribeAction('ACTION_YOU_WANT_TO_UNSUBSCRIBE'));
+
+// unsubscribe specific callback for action
+dispatch(unsubscribeAction('ACTION_YOU_WANT_TO_UNSUBSCRIBE', CALLBACK_FUNCTION));
+
+// unsubscribe specific callback for all actions
+dispatch(unsubscribeAction(null, CALLBACK_FUNCTION));
+
+// unsubscribe everything
+dispatch(unsubscribeAction());
 
 ```
 
