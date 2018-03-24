@@ -78,12 +78,12 @@ describe('redux-subscriber-middleware', () => {
       beforeEach(() => {
         initialize();
       });
-      it('should call the callback function one time', () => {
+      it('should call the callback function two times', () => {
         store.dispatch(addAction());
         store.dispatch(subscribeAction('ADD_ACTION', mockCallback));
         store.dispatch(addAction());
         store.dispatch(addAction());
-        expect(mockCallback.mock.calls.length).toEqual(3);
+        expect(mockCallback.mock.calls.length).toEqual(2);
       });
     });
   });

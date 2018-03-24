@@ -5,18 +5,13 @@ export const SUBSCRIBEONCE = 'REDUX_ACTION_SUBSCRIBEONCE';
 export const UNSUBSCRIBE = 'REDUX_ACTION_UNSUBSCRIBE';
 
 export default () => {
-  const actionList = [];
   const subscribe = {};
   const subscribeOnce = {};
-  function subscribeHandler(subscribe, event, cb, isMultiple = false) {
-    const _subscribe = subscribe;
-    if (actionList.indexOf(event) >= 0) {
-      cb();
-      isMultiple ? _subscribe[event] = [cb] : '';
-    } else if (_subscribe[event]) {
-      _subscribe[event].push(cb);
+  function subscribeHandler(repo, event, cb) {
+    if (repo[event]) {
+      repo[event].push(cb);
     } else {
-      _subscribe[event] = [cb];
+      repo[event] = [cb]; // eslint-disable-line no-param-reassign
     }
   }
 
@@ -62,7 +57,6 @@ export default () => {
         default:
       }
     } else {
-      actionList.push(action.type);
       if (subscribe[action.type]) {
         subscribe[action.type].forEach(cb => cb(result));
       }
